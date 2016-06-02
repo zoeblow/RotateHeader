@@ -1,0 +1,31 @@
+ .image-holder{
+    position: relative;
+    margin: 15px auto;
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+}
+ .head-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    border: 10px solid #ABCDEF;
+}
+.front{
+    z-index: 1;
+}
+.circle {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 1em auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+}

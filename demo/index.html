@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>头像选装</title>
+        <link rel="stylesheet" type="text/css" href="../dist/style/RotateHeader.css" />
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../dist/script/RotateHeader.js"></script>
+    </head>
+    <body>
+         <div class="image-holder one">
+            <img class="head-image up circle" src="images/up.png" width="150" height="150" alt="" />
+            <img class="head-image up-left circle" src="images/upleft.png" width="150" height="150" alt="" />
+            <img class="head-image left circle" src="images/left.png" width="150" height="150" alt="" />
+            <img class="head-image down-left circle" src="images/downleft.png" width="150" height="150" alt="" />
+            <img class="head-image down circle" src="images/down.png" width="150" height="150" alt="" />
+            <img class="head-image down-right circle" src="images/downright.png" width="150" height="150" alt="" />
+            <img class="head-image right circle" src="images/right.png" width="150" height="150" alt="" />
+            <img class="head-image up-right circle" src="images/upright.png" width="150" height="150" alt="" />
+            <img class="head-image front circle" src="images/front.png" width="150" height="150" alt=""/>
+        </div>
+    </body>
+        <script type="text/javascript">
+            // 鼠标位置
+            var mouseX;
+            var mouseY;
+            var imageOne;
+            //初始化
+            $(init);
+            $(window).load(init);
+            $(window).resize(init);
+            //鼠标移动
+            $(window).mousemove(getMousePosition);
+            //初始化函数
+            function init() {
+                mouseX = 0;
+                mouseY = 0;
+                imageOne = new RotateHeader("one");
+            }
+            //实时获取鼠标位置
+            function getMousePosition(event) {
+                mouseX = event.pageX;
+                mouseY = event.pageY;
+                imageOne.setImageDirection();
+            }
+        </script>
+</html>
